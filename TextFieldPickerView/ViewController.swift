@@ -13,16 +13,30 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var outputButton: UIButton!
     
     var  pickerView = UIPickerView()
     
-    
+    // 結果画面に送る用のもの
+    var selectArmedForce = [
+        "force":""
+    ]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // 戻る非表示
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        // PickerView生成
         createPickerView()
+        // 出力ボタン無効化
+        outputButton.isEnabled = false
+        outputButton.layer.backgroundColor = UIColor.gray.cgColor
+        
+        
     }
-    
+    // MARK:-pickerView関連
     func createPickerView()  {
         pickerView.delegate = self
         // UITextField が持つ inputView に pickerView を設定
@@ -38,12 +52,28 @@ class ViewController: UIViewController {
     // 完了ボタンでキーボードを閉じる
     @objc func donePicker() {
         textField.endEditing(true)
+        outputButton.isEnabled = true
+        outputButton.layer.backgroundColor = UIColor.green.cgColor
     }
     // キーボード以外タップでキーボード閉じる
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         textField.endEditing(true)
     }
+    // MARK:- 出力関連
+    @IBAction func tapButton(_ sender: Any) {
+        // 送る用のものに格納
+        selectArmedForce["force"] = textField.text!
+        let selectResultViewController = self.storyboard?.instantiateViewController(withIdentifier: "SelectResultViewController") as! SelectResultViewController
+        // 検索結果情報を遷移画面へ渡す
+        selectResultViewController.selectArmedForce = self.selectArmedForce
+        // 検索した事柄を遷移画面へ渡す
+        // レストラン一覧画面へ遷移
+        self.navigationController?.pushViewController(selectResultViewController, animated: true)
+    }
+    
 }
+
+
 // MARK:-pickerView関連
 extension ViewController : UIPickerViewDelegate,UIPickerViewDataSource {
     

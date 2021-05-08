@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="28a-Xw-2hB">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--PickerView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TextFieldPickerView" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,43 +16,115 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ja-9Z-K3D">
-                                <rect key="frame" x="42" y="194" width="306" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="設定必須" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ja-9Z-K3D">
+                                <rect key="frame" x="42" y="188" width="306" height="34"/>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設定値" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4V-7Y-6lK">
-                                <rect key="frame" x="42" y="258" width="306" height="20"/>
+                                <rect key="frame" x="42" y="252" width="306" height="34"/>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbK-Ty-3tF">
+                                <rect key="frame" x="42" y="346" width="306" height="34"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                <state key="normal" title="出力">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PVg-hB-ebn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="3ja-9Z-K3D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="Bbi-kn-r54"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UbK-Ty-3tF" secondAttribute="bottom" constant="430" id="Ieg-Qo-qZl"/>
+                            <constraint firstItem="UbK-Ty-3tF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="Kw7-iY-wAr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3ja-9Z-K3D" secondAttribute="trailing" constant="42" id="L0h-ub-2Ld"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="x4V-7Y-6lK" secondAttribute="bottom" constant="532" id="gzE-Qk-4DB"/>
+                            <constraint firstItem="UbK-Ty-3tF" firstAttribute="top" secondItem="x4V-7Y-6lK" secondAttribute="bottom" constant="60" id="QUz-fE-1KX"/>
+                            <constraint firstItem="UbK-Ty-3tF" firstAttribute="height" secondItem="x4V-7Y-6lK" secondAttribute="height" id="bMJ-FY-izc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UbK-Ty-3tF" secondAttribute="trailing" constant="42" id="jvy-bS-Mn1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x4V-7Y-6lK" secondAttribute="trailing" constant="42" id="l63-1U-LmY"/>
                             <constraint firstItem="x4V-7Y-6lK" firstAttribute="top" secondItem="3ja-9Z-K3D" secondAttribute="bottom" constant="30" id="mec-UV-Vtb"/>
+                            <constraint firstItem="x4V-7Y-6lK" firstAttribute="height" secondItem="3ja-9Z-K3D" secondAttribute="height" id="ogd-2C-nz7"/>
                             <constraint firstItem="x4V-7Y-6lK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="qhw-Mh-UOQ"/>
-                            <constraint firstItem="3ja-9Z-K3D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="vxs-Dy-3W8"/>
+                            <constraint firstItem="3ja-9Z-K3D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="vxs-Dy-3W8"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="PickerView" id="c9K-s4-dWc"/>
                     <connections>
+                        <outlet property="outputButton" destination="UbK-Ty-3tF" id="nBN-tI-wlw"/>
                         <outlet property="resultLabel" destination="x4V-7Y-6lK" id="AfM-bx-p6X"/>
                         <outlet property="textField" destination="3ja-9Z-K3D" id="vM3-3a-aQO"/>
+                        <segue destination="ERb-Nt-M4l" kind="show" id="xYq-HU-92f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="119"/>
+            <point key="canvasLocation" x="1067.6923076923076" y="118.72037914691943"/>
+        </scene>
+        <!--選択結果-->
+        <scene sceneID="YAW-U2-4wJ">
+            <objects>
+                <viewController storyboardIdentifier="SelectResultViewController" id="ERb-Nt-M4l" customClass="SelectResultViewController" customModule="TextFieldPickerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u54-5t-qWM">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選択結果" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdc-7c-ZM5">
+                                <rect key="frame" x="8" y="188" width="374" height="24"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="csH-Br-E6w"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bdc-7c-ZM5" firstAttribute="top" secondItem="csH-Br-E6w" secondAttribute="top" constant="100" id="Jir-cm-61O"/>
+                            <constraint firstItem="csH-Br-E6w" firstAttribute="trailing" secondItem="bdc-7c-ZM5" secondAttribute="trailing" constant="8" id="P9w-PU-i9J"/>
+                            <constraint firstItem="bdc-7c-ZM5" firstAttribute="leading" secondItem="csH-Br-E6w" secondAttribute="leading" constant="8" id="aV3-us-PvL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="選択結果" id="P3a-t0-t3U"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="bdc-7c-ZM5" id="qL6-yy-GHO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vQ8-lF-UWm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1869" y="119"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pB4-cq-1Ay">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="28a-Xw-2hB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cXQ-bX-3o3">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Mtc-2A-ztj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PaG-uk-jId" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.46153846153845" y="118.72037914691943"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
