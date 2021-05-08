@@ -13,6 +13,7 @@
 		ED8D11262646CBD8004CB10D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED8D11242646CBD8004CB10D /* Main.storyboard */; };
 		ED8D11282646CBD9004CB10D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED8D11272646CBD9004CB10D /* Assets.xcassets */; };
 		ED8D112B2646CBD9004CB10D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED8D11292646CBD9004CB10D /* LaunchScreen.storyboard */; };
+		EDE37C9A2646FAEC00F9CD1C /* SelectResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE37C992646FAEC00F9CD1C /* SelectResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		ED8D11272646CBD9004CB10D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED8D112A2646CBD9004CB10D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED8D112C2646CBD9004CB10D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDE37C992646FAEC00F9CD1C /* SelectResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				ED8D11202646CBD8004CB10D /* SceneDelegate.swift */,
 				ED8D11222646CBD8004CB10D /* ViewController.swift */,
 				ED8D11242646CBD8004CB10D /* Main.storyboard */,
+				EDE37C992646FAEC00F9CD1C /* SelectResultViewController.swift */,
 				ED8D11272646CBD9004CB10D /* Assets.xcassets */,
 				ED8D11292646CBD9004CB10D /* LaunchScreen.storyboard */,
 				ED8D112C2646CBD9004CB10D /* Info.plist */,
@@ -139,6 +142,7 @@
 			files = (
 				ED8D11232646CBD8004CB10D /* ViewController.swift in Sources */,
 				ED8D111F2646CBD8004CB10D /* AppDelegate.swift in Sources */,
+				EDE37C9A2646FAEC00F9CD1C /* SelectResultViewController.swift in Sources */,
 				ED8D11212646CBD8004CB10D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
